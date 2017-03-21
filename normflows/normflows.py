@@ -169,7 +169,7 @@ def make_variational_objective_funs(logprob, D, beta_schedule,
         # 1. draw samples from the variational posterior, eps ~ N(0,I)
         zs, ldet_sums = draw_variational_samples(params, num_samples)
 
-        # 1.5 negative entropy of z0
+        # 1.5 negative entropy of z0 --- likely we need this for KL though
         # not needed for optimization
 
         # 2. compute expected value of the sum of jacobian terms
